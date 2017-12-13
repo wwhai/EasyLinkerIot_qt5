@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PlayMusicWindow</class>
+ <widget class="QMainWindow" name="PlayMusicWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">PlayMusicWindow{
+background-color: rgb(0, 0, 0);
+}
+
+QTabWidget{	
+	     font: 14pt &quot;Arial&quot;;
+         border:2px solid  rgb(255, 255, 255);
+         color: rgb(255, 255, 255);
+	     background-color: rgb(0, 0, 0);
+	     border-color: rgb(255, 255, 255);
+}
+
+QTabWidget::pane{
+	     font: 14pt &quot;Arial&quot;;
+         border:2px solid  rgb(255, 255, 255);
+         color: rgb(255, 255, 255);
+	     background-color: rgb(0, 0, 0);
+	     border-color: rgb(255, 255, 255);
+    
+}
+QTabWidget::tab-bar{
+         font: 14pt &quot;Arial&quot;;
+         border:2px solid  rgb(255, 255, 255);
+         color: rgb(255, 255, 255);
+	     background-color: rgb(0, 0, 0);
+         min-height:50px;
+         min-width: 80px;
+	     border-color: rgb(255, 255, 255);
+}
+QTabBar::tab{
+	background: rgb(0, 0, 0);
+	color:white;
+	min-width:30ex;
+	min-height:10ex;
+}
+QTabBar::tab:hover{
+background-color: #003366; 
+}
+QTabBar::tab:selected{
+     background-color: rgb(255, 255, 255);
+	 color: rgb(0, 0, 255);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QTabWidget" name="musicPlayerTabView">
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
