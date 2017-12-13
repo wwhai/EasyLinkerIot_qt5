@@ -2,8 +2,9 @@
 #define PLAYMUSICWINDOW_H
 
 #include <QMainWindow>
-#include <QWebEngineView>
-
+#include <QMediaPlayer>
+#include <QVideoWidget>
+#include <QMediaPlaylist>
 namespace Ui {
 class PlayMusicWindow;
 }
@@ -15,8 +16,10 @@ class PlayMusicWindow : public QMainWindow
 public:
     explicit PlayMusicWindow(QWidget *parent = 0);
     ~PlayMusicWindow();
+QMediaPlayer *player;
+QVideoWidget *videoWidget;
+QMediaPlaylist *playlist;
 
-    QWebEngineView *qWebEngineView;
 private:
     Ui::PlayMusicWindow *ui;
 };
