@@ -19,7 +19,7 @@ public:
 QMediaPlayer *player;
 QVideoWidget *videoWidget;
 QMediaPlaylist *playlist;
-
+void closeEvent( QCloseEvent * event );
 private:
     Ui::PlayMusicWindow *ui;
 };

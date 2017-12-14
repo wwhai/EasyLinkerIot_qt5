@@ -6,12 +6,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    setWindowState(Qt::WindowMaximized);
-    setWindowFlags(this->windowFlags() &~ (Qt::WindowMinMaxButtonsHint  ));
+//    setWindowState(Qt::WindowMaximized);
+//    setWindowFlags(this->windowFlags() &~ (Qt::WindowMinMaxButtonsHint  ));
     QObject::connect(ui->playMusicButton,SIGNAL(clicked(bool)),this,SLOT(showPlayMusicWindow()));
 
 
-    playMusicWindow=new PlayMusicWindow;
 }
 
 MainWindow::~MainWindow()
@@ -22,6 +21,8 @@ MainWindow::~MainWindow()
  这里是定义打开窗口的函数
 */
 void MainWindow::showPlayMusicWindow(){
+
+    playMusicWindow=new PlayMusicWindow;
     playMusicWindow->show();
 }  //播放
 void MainWindow::showMonitorWindow(){}  //打开监控器的窗口
