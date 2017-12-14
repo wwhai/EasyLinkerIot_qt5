@@ -102,8 +102,11 @@ QProgressBar{
     </item>
     <item row="0" column="0" rowspan="3" colspan="6">
      <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/picture/res/bg.jpg);</string>
+      </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>音乐播放器</string>
       </property>
      </widget>
     </item>

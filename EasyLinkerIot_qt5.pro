@@ -36,3 +36,6 @@ HEADERS += \
 FORMS += \
         mainwindow.ui \
     playmusicwindow.ui
+
+RESOURCES += \
+    picture.qrc
