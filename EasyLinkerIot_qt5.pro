@@ -27,11 +27,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    playmusicwindow.cpp
+    playmusicwindow.cpp \
+    easylinkerclient.cpp
 
 HEADERS += \
         mainwindow.h \
-    playmusicwindow.h
+    playmusicwindow.h \
+    easylinkerclient.h
 
 FORMS += \
         mainwindow.ui \
@@ -39,3 +41,11 @@ FORMS += \
 
 RESOURCES += \
     picture.qrc
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/libs/mqtt/lib/ -lqmqtt
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/libs/mqtt/lib/ -lqmqttd
+
+INCLUDEPATH += $$PWD/libs/mqtt/include
+DEPENDPATH += $$PWD/libs/mqtt/include
+INCLUDEPATH += $$PWD/libs/mqtt
+DEPENDPATH += $$PWD/libs/mqtt

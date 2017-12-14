@@ -5,17 +5,25 @@
 #include <QVideoWidget>
 #include <QMap>
 #include <QString>
+#include <QVideoWidget>
+#include "easylinkerclient.h"
 int main(int argc, char *argv[])
 {
+    //    QMediaPlayer*player = new QMediaPlayer;
+    //    QVideoWidget * vw=new QVideoWidget;
+    //    player->setMedia(QUrl::fromLocalFile("C:/Users/Administrator/Desktop/vvv/test.mp4"));
+    //    vw->show();
+    //    player->setVideoOutput(vw);
+    //    player->play();
     QApplication a(argc, argv);
-        MainWindow w;
-        w.show();
+//    MainWindow w;
+//    w.show();
+    QString str="EASY_LINKER";
 
-//    QMap<QString,QString> * map =new QMap<QString,QString>();
-//    map->insert(QString("°®ÇéÂòÂô"),QString("http://www.baidu.com"));
-//    map->insert(QString("°®ÇéÂòÂô"),QString("http://www.baidu.com"));
-//    map->insert(QString("°®ÇéÂòÂô"),QString("http://www.baidu.com"));
-//    map->insert(QString("°®ÇéÂòÂô"),QString("http://www.baidu.com"));
-//    map->insert(QString("°®ÇéÂòÂô"),QString("http://www.baidu.com"));
+    EasyLinkerClient *client=new EasyLinkerClient(str);
+    client->setHost(QHostAddress::LocalHost);
+    client->run();
+
+
     return a.exec();
 }

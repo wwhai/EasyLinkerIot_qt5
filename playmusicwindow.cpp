@@ -120,10 +120,12 @@ void PlayMusicWindow:: playOrPauseMusic(){
 
 }
 void PlayMusicWindow::preMusic(){
-
-
+playlist->setCurrentIndex(playlist->currentIndex()+1);
 }
 void  PlayMusicWindow::nextMusic(){
 
+
+}
+void PlayMusicWindow::playFromList(){
 
 }

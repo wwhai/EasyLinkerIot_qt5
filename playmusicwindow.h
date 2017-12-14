@@ -42,6 +42,7 @@ public slots:
     void preMusic();
     void nextMusic();
     void playOrPauseMusic();
+    void playFromList();
 
 };
 
