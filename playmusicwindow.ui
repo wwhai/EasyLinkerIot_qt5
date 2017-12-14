@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>827</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -82,21 +82,48 @@ QProgressBar{
          min-width: 80px;
 	     border-color: rgb(255, 255, 255);
 }
-</string>
+QListView{
+	background-color: rgb(0, 0, 0);
+	gridline-color: rgb(255, 255, 255);
+}
+QListView::item{
+         font: 14pt &quot;Arial&quot;;
+         border:2px solid  rgb(255, 255, 255);
+         color: rgb(255, 255, 255);
+         border-radius: 2px;
+	     background-color: rgb(0, 0, 0);
+         min-height:50px;
+         min-width: 80px;
+	     border-color: rgb(255, 255, 255);
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="4" column="2" colspan="5">
-     <widget class="QProgressBar" name="progressBar_2">
+     <widget class="QProgressBar" name="volumeProgressBar">
       <property name="value">
-       <number>24</number>
+       <number>50</number>
       </property>
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="playOrPauseButton">
       <property name="text">
-       <string>&gt;|</string>
+       <string>播放</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="nextButton">
+      <property name="text">
+       <string>上一曲</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="stopButton">
+      <property name="text">
+       <string>停止</string>
       </property>
      </widget>
     </item>
@@ -110,33 +137,15 @@ QProgressBar{
       </property>
      </widget>
     </item>
-    <item row="3" column="4">
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="text">
-       <string>上一曲</string>
-      </property>
-     </widget>
-    </item>
     <item row="5" column="2" colspan="5">
-     <widget class="QProgressBar" name="progressBar">
+     <widget class="QProgressBar" name="progressProgressBar">
       <property name="value">
-       <number>24</number>
+       <number>0</number>
       </property>
      </widget>
     </item>
-    <item row="3" column="2">
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="text">
-       <string>停止</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="3">
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="text">
-       <string>下一曲</string>
-      </property>
-     </widget>
+    <item row="4" column="0" rowspan="2">
+     <widget class="QDial" name="volumeDial"/>
     </item>
     <item row="5" column="1">
      <widget class="QLabel" name="label_2">
@@ -145,8 +154,12 @@ QProgressBar{
       </property>
      </widget>
     </item>
-    <item row="4" column="0" rowspan="2">
-     <widget class="QDial" name="dial"/>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="preButton">
+      <property name="text">
+       <string>下一曲</string>
+      </property>
+     </widget>
     </item>
     <item row="4" column="1">
      <widget class="QLabel" name="label">
@@ -156,7 +169,7 @@ QProgressBar{
      </widget>
     </item>
     <item row="0" column="6" rowspan="4">
-     <widget class="QListWidget" name="listWidget">
+     <widget class="QListWidget" name="musicListWidget">
       <item>
        <property name="text">
         <string>带你去旅行</string>
