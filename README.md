@@ -1,2 +1,2 @@
 # EasyLinkerIot_qt5
-EasyLinkerIot_qt5
+用QT5封装的EasyLinker客户端
