@@ -16,13 +16,13 @@ int main(int argc, char *argv[])
     //    player->setVideoOutput(vw);
     //    player->play();
     QApplication a(argc, argv);
-//    MainWindow w;
-//    w.show();
-    QString str="EASY_LINKER";
+    MainWindow w;
+    w.show();
+//    QString str="EASY_LINKER";
 
-    EasyLinkerClient *client=new EasyLinkerClient(str);
-    client->setHost(QHostAddress::LocalHost);
-    client->run();
+//    EasyLinkerClient *client=new EasyLinkerClient(str);
+//    client->setHost(QHostAddress::LocalHost);
+//    client->run();
 
 
     return a.exec();
